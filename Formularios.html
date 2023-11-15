@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários no HTML</title>
+</head>
+<body>
+    <h1>Formulários: composição e validação</h1>
+    <p>
+    Tudo o que vimos até esse ponto nos permitiu criar um documento HTML estruturado contendo textos, listas, tabelas, vídeo e áudio. 
+    <br> Neste módulo, falaremos sobre o Formulário.
+    <br> Este elemento é um dos mais utilizados para prover interação entre usuários e uma página Web ou até mesmo um aplicativo mobile.
+    </p>
+
+    <h3> --Estrutura básica do formulário--</h3>
+    <p>
+        <h4>Estrutura inicial do formulário</h4>
+        
+        A exemplo do que vimos com as tabelas, o formulário é composto por uma tag principal, um container, e várias tags “filhas”.Tags como campos de texto, de uma ou mais linhas; campos de seleção; e botões fazem parte de sua estrutura.
+
+        <br> Além disso, para maior clareza, também usamos tags para informar a função dos campos do formulário. São as chamadas “label”. A tabela a seguir lista as tags comumente usadas em um formulário:
+
+        <table class="c-table" border="1">
+            <thead class="table-thead">
+                <tr class="table-trow">
+                    <th class="table-theader">
+                        <strong>Tag</strong>
+                    </th>
+                    <th class="table-theader">
+                        <strong>Função</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="c-table__tbody">
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p>form </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> Container principal do formulário.
+                        </p>
+                    </td>
+                </tr>
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p>input </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> Campo do formulário. Como há diversos tipos de campos, fazemos uso do atributo “type” para informar o tipo a ser utilizado – conforme veremos mais adiante.</p>
+                    </td>
+                </tr>
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p>textarea </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> Campo de texto de múltiplas linhas.</p>
+                    </td>
+                </tr>
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p> select e  option </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> Campos de seleção, onde o container é definido pela tag select e os itens pela tag option</p>
+                    </td>
+                </tr>
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p> button </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p>	Campo de botão. Permite que uma ação seja executada no formulário – enviar o formulário, limpar os dados etc.</p>
+                    </td>
+                </tr>
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p> label </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p>Usado para definir um título, uma legenda, que descreva para que serve cada campo do formulário.</p>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <h2>Conhecendo melhor os elementos e atributos do formulário</h2>
+        Na próxima imagem temos o fragmento HTML correspondente a um formulário. Nela é possível ver as tags já mencionadas, assim como algumas tipificações nos campos e novos atributos. Falaremos sobre ambos a seguir:
+
+        <form action="/pagina-processa-dados-do-form" method="post">
+            <fieldset>
+                <legend>Dados Gerais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" minlength="3" id="nome" />
+
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="text" id="data_nascimento">
+
+                <label for="cpf">CPF:</label>
+                <input type="cpf" minlength="11"   id="cpf" />        
+                </fieldset>
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <label for="tipo_endereço">Tipo:</label>
+                    <select id="tipo_endereço">
+                        <option value="">Selecione</option>
+                        <option value="">Rua</option>
+                        <option value="">Estrada</option>
+                        <option value="">Rodovia</option>
+                        <option value="">Outros</option>
+                    </select>
+
+                    <label for="logradouro_endereço">Logradouro:</label>
+                    <input type="text" id="logradouro_endereço" />
+
+                    <label for="numero_endereço">Numero:</label>
+                    <input type="text" id="numero_endereço" />
+
+                    <label for="complemento_endereço">Complemento:</label>
+                    <input type="text" id="complemento_endereço" />
+                </fieldset>
+
+                <fieldset>
+                    <legend>Fale Conoso</legend>
+
+                    <label for="msg">Mensagem:</label>
+                    <textarea type="text" id="msg"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <button type="submit">Enviar sua mensagem</button>
+                    <button type="reset">Limpar o Formulário</button>
+                </fieldset>
+
+        </form>
+
+        <table class="c-table" width="50%" border="1">
+            <thead class="table-thead">
+                <tr class="table-trow">
+                    <th class="table-theader">
+                        <strong>Tag</strong>
+                    </th>
+                    <th class="table-theader">
+                        <strong>Atributo</strong>
+                    </th>
+                    <th class="table-theader">
+                        <strong>Função do Atributo</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="c-table__tbody">
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p>form </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> action</p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> Define a URL (endereço) para a qual os dados do formulário serão enviados.</p>
+                    </td>
+                </tr>
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p>form </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> method </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> Define o método HTTP (POST ou GET) para envio dos dados.</p>
+                    </td>
+                </tr>
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p>label </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> for </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p>Vincula a tag (label) ao campo ao qual ela se refere. Este vínculo faz com que seja possível clicar na label para ativar o campo relacionado.</p>
+                    </td>
+                </tr>
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p>input </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> minlength, maxlength </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p>Definem a quantidade de caracteres mínima e máxima, respectivamente, permitida em um campo.</p>
+                    </td>
+                </tr>
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p> input, button </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> type </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p>Define o tipo do campo e, sobretudo, como ele se comporta.</td>
+                </tr>
+                <tr class="c-table__trow">
+                    <td class="c-table__tdata">
+                        <p> option </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p> value </p>
+                    </td>
+                    <td class="c-table__tdata">
+                        <p>Este atributo também pode ser utilizado na tag (input). Ele define o valor do campo. No caso da (option), os seus valores possíveis são previamente definidos quando a página é codificada. Já na (input), embora também possa ser previamente definido, normalmente é o usuário quem define o seu valor.</td>
+                </tr>
+            </tbody>
+            </table>
+        </p>
+        <p>
+        <h3>Atributos do formulário</h3>
+
+        <strong>O atributo “type”</strong> 
+
+        Este atributo, dada a sua importância, precisa ser visto de forma aprofundada. Como já dito, além de definir o tipo do campo, ele também determina como este se comporta. No código apresentado na tabela é utilizado apenas o tipo “text”, que, no caso da tag (input), corresponde ao seu valor padrão.
+
+        <br> Alguns outros tipos comuns são:
+
+        <br> <strong>Password</strong> = Mascara o texto com asteriscos.
+        <br> <strong>Hidden</strong> = Esconde o campo para não ser exibido no navegador.
+        <br> <strong>Checkbox</strong> = Usado para seleção de valor através de click/check.
+        <br> <strong>Radio</strong> = Usado para seleção exclusiva de valor – quando é apresentada mais de uma opção, apenas uma poderá ser selecionada, ao contrário do tipo “checkbox”.
+        <br> <strong>Submit</strong> = Associada à tag button, dispara o evento que envia/submete o formulário.
+        <br> <strong>Reset</strong> = Associada à tag button, dispara o evento que limpa os valores do formulário.
+        <br> <strong>Button</strong> = Uma tag input pode ser do tipo “button” – exercendo, assim, a mesma função da tag button.
+        <br> <strong>placeholder</strong>  - <b>Função</b> = Exibir um texto no campo de input <b>Comentário</b> = Utilizado para dar uma dica ao usuário sobre o dado a ser inserido.
+        <br> <strong>required</strong>  - <b>Função</b> = Determinar se um campo é obrigatório. <b>Comentário</b> = Utilizado na validação dos dados de um formulário.
+        <br> <strong>autofocus</strong>  - <b>Função</b> = Fixar o foco no campo. <b>Comentário</b> = Utilizado quando desejamos que, ao carregar o formulário, um determinado campo seja focado.
+        <br> <strong>pattern</strong>  - <b>Função</b> = Validar o valor de um campo com base em uma expressão regular.
+        (As RegEX  expressões regulares podem ser consideradas um recurso de linguagem de programação para a análise e manipulação de texto.) <b>Comentário</b> = O campo de tel. é um bom exemplo de utilização desse atributo. Com ele podemos, por exemplo, determinar a quantidade de caracteres e o formato esperado para um campo.
+        
+        <h4>Tipos</h4>
+
+        <br> <strong>tel</strong>  - <b>Função</b> = Inserir números de telefone.<b>Comentário</b> = Para uma melhor usabilidade, deve ser usado em conjunto com o atributo pattern.
+        <br> <strong>datetime</strong>  - <b>Função</b> = Inserir datas com o fuso horário em UTC a partir de um calendário.
+        <br> <strong>date</strong>  - <b>Função</b> = Inserir datas sem fuso horário a partir de um calendário.
+        <br> <strong>number</strong>  - <b>Função</b> = Inserir números. <b>Comentário</b> = Cria um componente diferente do imput normal, em que, por meio de setas, os números podem ser incrementados ou decrementados.
+
+
+
+
+
+
+        </p>
+
+</body>
+</html>
