@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Resumos aula Estácio</title>
+</head>
+<body>
+    <h1>Linguagem de Marcação de Hypertexto</h1>
+    <p>
+        <b>doctype html</b> O Doctype é uma instrução obrigatória e permite que seja informado ao navegador ou dispositivo o tipo de documento a ser carregado, permitindo assim a correta renderização da página.
+        <br> <b>html</b> Tal elemento é a raiz do documento. Logo, e lembrando que o código HTML é composto por uma estrutura hierárquica de tags, dizer que a html é a raiz da árvore do documento.
+        <br> <b>head</b> Cabeçalho do documento. Fazendo analogia ao corpo humano, devemos vê-la como a cabeça, uma vez que contém as tags que serão usadas para manter todo o documento funcionando e em ordem.
+                             
+    <h2>Tags que fazem parte do cabeçalho:</h2>
+
+                <b>title</b> = É o título do documento, sendo visualizada na barra de título do navegador.
+            <br> <b>meta</b> = Engloba uma série de informações comumente chamadas de metainformações como a descrição da página, palavras-chave etc.
+            <br> <b>script</b> = É responsável pela inclusão e/ou definição de scripts relacionados ao documento.
+            <br> <b>link</b> = É responsável pela inclusão de folhas de estilo (externas) relacionadas ao documento. Também possibilita a inclusão de favicons (pequenos ícones que aparecem na barra de endereços do navegador).
+            <br> <b>style</b> = Assim como a anterior, é responsável pelo vínculo de folhas de estilo ao documento quando elas são declaradas diretamente no documento.
+            <br> <b>body</b> = Esta é responsável pela estruturação do documento, sobretudo de seu conteúdo e também apresentação  embora seja fortemente recomendado que a apresentação do documento, como será visto no módulo específico, seja feita por meio de folhas de estilo (CSS).
+            Quando navegamos em um website, todo o conteúdo que vemos os textos, imagens e demais elementos está contido na tag body.
+    </p>
+    <h3>Estrutura básica de uma página Web</h3>
+        <p>
+            <h4>O que são Tags?</h4>
+
+             Como visto nos exemplos do módulo anterior, 
+             tags são palavras, escritas entre os caracteres de menor “<” e maior “>” e que servem 
+             para informar ao navegador a estrutura e o significado do conteúdo inserido em uma página Web.
+
+             <h4>Tipos e composição das tags</h4>
+
+            As tags podem ser divididas em tipos, de acordo com as suas funções: Estruturais, textuais e semânticas. Outra característica importante é que elas também podem ter atributos.
+
+            <br> ID = Utilizado para definir um identificador, que deve ser único, para uma tag em um documento.
+            <br> CLASS = Usado para definir uma classe à qual uma ou mais tags pertencem. Com base nesses dois tipos de identificação, é possível, por exemplo, fazer referência a um ou mais atributos para inserirmos estilização visual nas páginas, através de Folhas de Estilo ou eventos e interação, através de Javascript.
+
+            <h4>Tipos de tags: textuais e semânticas</h4>
+
+            Até aqui, conhecemos algumas tags associadas à estrutura, dita obrigatória, de uma página. Também vimos que, na maioria dos casos, as páginas Web possuem uma mesma estrutura em termos de conteúdo. <br>A seguir, conheceremos os tipos de tag textuais e semânticos.
+
+            <br> <b>Tags textuais</b> = São responsáveis por organizar o conteúdo da página, ou seja, textos, mídias e links, por exemplo. Algumas das principais tags textuais, inclusive vistas anteriormente, são: <b> p, h1, h6, img e a </b>. <br>Essas tags e suas funções serão descritas a seguir.
+
+           <br> <b>Tags semânticas</b> = A partir da HTML5 foram inseridas tags com a função semântica de organizar a estrutura de conteúdo de uma página.
+    </p>
+        
+        <h2>Tags de formatação (strong) e (em) vs (b) e (i) </h2>
+        <p>
+        <b> (b) aplica o efeito de negrito em um texto;</b>
+        <br> <strong> (strong) aplica o efeito de negrito em um texto e o marca como importante;</strong>
+        <br> <i> (i) aplica o efeito de itálico em um texto;</i>
+        <br> <em> (em) aplica o efeito de itálico e dá ênfase a um texto.</em>
+        <br>
+        <br>O destaque que tais elementos merecem diz respeito à função semântica que as tags (strong) e (em) exercem.
+        <br> É interessante notar que as duas produzem o mesmo efeito visual que (b) e (i) respectivamente em um texto, ou seja, marcá-lo como negrito e/ou itálico. 
+        <br> Entretanto, há uma diferença importante entre elas, que vai além da visualização do texto no navegador pela maioria dos usuários. 
+        <br> A função semântica de ambas é perceptível em dispositivos de leitura de tela, que transformam o texto em áudio, e normalmente são utilizados por pessoas com deficiência visual.
+        <br> <abbr title="significado de palavras">TEST</abbr>
+
+        <h2>Tags HTML complexas</h2>
+        <p>
+            <h3>Listas na HTML</h3>
+
+            O HTML fornece suporte para a representação visual de três tipos de listas: as ordenadas, as não ordenadas e as de definição, veja:
+
+            <br> <b>Ordenadas</b> = Usadas quando desejamos listar dados com a necessidade de representar a sua ordenação de forma numérica ou alfabética.
+            <br> <b>Não ordenadas</b> = Usadas quando não há necessidade de listar ordenadamente.
+            <br> <b>De atribuição</b> = Usadas quando precisamos listar itens e atribuirmos uma descrição a eles.
+            <br> Outra característica importante das listas é que a sua marcação HTML é composta por uma tag de container, ou tag “pai”, e por seus itens ou “filhos”. Além disso, a lista de definição possui ainda um terceiro item, que é justamente o utilizado para descrevê-lo. 
+            <br> Tipo = Ordenadas - Tag Container = (ol) Tag Item = (li)
+            <br> Tipo = Não ordenadas - Tag Container = (ul) Tag Item = (li)
+            <br> Tipo = De atribuição - Tag Container = (dl) Tag Item = (dt) Tag descrição = (dd)
+
+            <ol>
+                <li> Primeiro Item da lista</li>
+                <li> Segundo Item da lista </li>
+                <li> Terceiro Item da lista </li>
+           </ol>
+
+           <ul >
+            <li> Primeiro Item da lista </li>
+            <li> Segundo Item da lista </li>
+            <li> Terceiro Item da lista </li>
+           </ul>
+
+           <dl>
+            <dt> Primeiro Item da lista </dt>
+                <dd> Descição 1</dd>
+            <dt> Segundo Item da lista </dt>
+                <dd>Descrição 2</dd>
+            <dt> Terceiro Item da lista </dt>
+                 <dd>Descrição 3</dd>
+           </dl>
+         </p>
+
+         <h3>Tabelas na HTML</h3>
+         <p>
+            Quando precisamos lidar com dados tabulares em uma página web utilizamos tabelas. As tabelas usadas nesse documento são exemplos do tipo de dado e também da apresentação obtida ao utilizarmos tais elementos na HTML.
+            <br> <h4>Estrutura das Tabelas</h4>
+
+            A marcação HTML relacionada às tabelas contém, além da tag principal (table), outras tags. A principal define o container geral.
+            <br> De forma hierárquica, a seguir temos as tags para a definição de linhas (tr) e colunas (td). 
+            <br> Com estas três tags é possível representarmos uma tabela simples. Entretanto, há tags adicionais que podem ser usadas e que ajudam a melhor organizar o conteúdo.
+            
+            <br> Tag = (table) Função = Container principal da tabela
+            <br> Tag = (tr) Função = Representa as linhas, sendo composta pelas tags relacionadas às colunas.
+            <br> Tag = (td) Função = Representa as colunas e precisa ser inserida dentro da tag de linha.
+            <br> Tag = (th) Função = Também representa colunas e é usada para exibir o título de uma coluna, possuindo, neste sentido, função semântica. Assim como a tag <td>, deve estar contida em uma tag de linha. Este elemento apresenta estilos próprios, sendo renderizado de forma diferente das colunas comuns.
+            <br> Tag = (thead) Função = Armazena o cabeçalho da tabela, sendo composto por linhas e colunas. Este elemento, a exemplo do que vimos anteriormente, tem função semântica em termos de estruturação de conteúdo.
+            <br> Taf = (tfoot) Função = Armazena o rodapé da tabela, tendo também função semântica em termos de estruturação.
+            
+            <!--Tabela Simples-->
+            <h2>Tabela Simples</h2>
+            <table width="100%" border="1">
+                <tr>
+                    <td>Willames</td>
+                    <td>HTML</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Leandro</td>
+                    <td>HTML</td>
+                    <td>7</td>
+                </tr>
+            </table>
+
+             <!--Tabela com cabeçalho e rodape-->
+             <h2>Tabela com cabeçalho e rodape</h2>
+             <table width="100%" border="1">
+                <thead>
+                    <tr>
+                        <th>Mes</th>
+                        <th>Horas/Aula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Junho</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>Julho</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th>60</th>
+                    </tr>
+                </tfoot>
+             </table>
+
+                <!--Tabela com Colpsan-->
+                <h2>Tabela com Colpsan</h2>
+                <table border="1">
+                    <tr>
+                        <td>Aluno</td>
+                        <td colspan="2">Disciplina</td>
+                    </tr>
+
+                    <tr>
+                        <td>Alex</td>
+                        <td>HTML</td>
+                        <td>Ambiente Web</td>
+                    </tr>
+                </table>
+         </p>
+         <h3>Mídias na HTML</h3>
+         <p>
+            Mídias: vídeo e áudio
+
+            <br> O suporte à multimídia na HTML vem melhorando ao longo dos anos e versões. Com o advento da HTML5, tornou-se possível, de forma muito simples, incorporar vídeo e áudio em uma página Web. Para isso, são usadas as tags (video) e (audio), veja:
+           <br>
+            <video src= “https://www.youtube.com/watch?v=ND0JpIHDb6U” controle></video>
+            <audio src= “/audios/sample.ogg” controls autoplay loop></audio>
+            
+         </p>
+
+</body>
+</html>
